@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://nextjs.org">
-    <img src="/Logo-main.svg" height="128">
+    <img src="Logo-main.svg" height="128">
     <h1 align="center">Adazolhub</h1>
   </a>
 </p>
