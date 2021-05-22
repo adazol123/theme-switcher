@@ -1,7 +1,7 @@
 const darkButton = document.getElementById('dark');
 const lightButton = document.getElementById('light');
 const solarButton = document.getElementById('solar');
-const testDark = document.getElementsByTagName("html")[0]
+const testDark = document.querySelector('html');
 
 const body = document.body;
 
@@ -11,25 +11,25 @@ const  isSolar = localStorage.getItem('isSolar');
 
 
 if (theme) {
-    body.classList.add(theme);
+    testDark.setAttribute('data-color-mode',theme)
     isSolar && body.classList.add('solar')
 
 }
 
 
 darkButton.onclick = () => {
-    body.classList.replace('light', 'dark');
+    // body.classList.replace('light', 'dark');
     localStorage.setItem('theme', 'dark');
-    testDark.classList.add('theme-dark');
-    testDark.setAttribute( 'data-color-mode', 'dark' );
-    testDark.s
+    testDark.setAttribute('data-color-mode', 'dark')
+    console.log(testDark)
 
 }
 
 lightButton.onclick = () => {
-    body.classList.replace('dark', 'light');
+    // body.classList.replace('dark', 'light');
     localStorage.setItem('theme', 'light');
-    testDark.setAttribute( 'data-color-mode', 'light' );
+    testDark.setAttribute('data-color-mode', 'light')
+    console.log(testDark)
 }
 
 solarButton.onclick = () => {
